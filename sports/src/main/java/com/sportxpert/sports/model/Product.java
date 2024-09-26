@@ -1,7 +1,6 @@
 package com.sportxpert.sports.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 @AllArgsConstructor
@@ -12,6 +11,10 @@ import lombok.*;
 @Entity
 @Table(name = "tbl_products")
 public class Product {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String name;
 
